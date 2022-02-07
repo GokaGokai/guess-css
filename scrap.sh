@@ -1,15 +1,16 @@
-#! /bin/bash
+#! bin/bash
 
-SEED="https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/css3-modsel-1.html"
+mkdir $1
+SEED="https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/"
 
-# curl -o /myrep/first.html $SEED
+curl -o $1/index $SEED
+INDEX=$(cat $1/index | grep "a href" | grep "css3" | cut -d '"' -f2 | cut -d '"' -f1)
 
-TEST=$(cat css3test.html | grep "<a href" | grep "==&gt" | cut -d '"' -f2 | cut -d '"' -f1 )
+rm $1/index
 
-curl -o second.html https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/$TEST
-echo $TEST
-# if [ $TEST == "" ]
-# then echo "hi"
-
-# curl -o test https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/#
-# fi
+for PAGE in $INDEX
+do
+    DIR=$1/$PAGE
+    curl -o $DIR $SEED$PAGE
+    sleep 2
+done
