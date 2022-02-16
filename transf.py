@@ -1,4 +1,4 @@
-from asyncio.windows_events import NULL
+from logging.config import stopListening
 from bs4 import BeautifulSoup
 
 # Only the first test for now
@@ -29,17 +29,25 @@ if next != None:
 field = skeletonDoc.find_all("p")
 cssField = field[1]
 htmlField = field[2]
-solutionField = skeletonDoc.findAll(class_="test-box")[2]
+# solutionField = skeletonDoc.findAll(class_="test-box")[2]
+solutionField = skeletonDoc.find(class_="sol")
+styleField = skeletonDoc.find("style")
 
 style = scrappedDoc.find("style")
 cssScrapped = scrappedDoc.find_all("pre")[0].string
 htmlScrapped = scrappedDoc.find_all("pre")[1].string
-# solutionScrapped = scrappedDoc.find(class_="testText").contents[1]
+solutionScrapped = scrappedDoc.find(class_="testText")
 
+# print(solutionField)
 cssField.string = cssScrapped
 htmlField.string = htmlScrapped
-# solutionField.string.insert_after("test")
-# print(solutionField)
+solutionField.contents = solutionScrapped.contents
+# styleField[1]['style']=style.contents
+styleField.contents=style.contents
+# solutionField['style']=style.contents
+
+# print(styleField)
+# print(solutionScrapped)
 
 
 with open("guess-css/transf-html/css3-modsel-1.html", "w") as file:
