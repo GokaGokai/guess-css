@@ -3,6 +3,7 @@
 from bs4 import BeautifulSoup
 from random import shuffle
 import re
+import sys
 
 # Shuffle function
 RE_GARBLE = re.compile(r"\b(\w)(\w+)(\w)\b")
@@ -23,7 +24,7 @@ def garble(sentence):
 # Add ARGUMENT for HTML names
 # Input
 
-namefile = "css3-modsel-d4"
+namefile = str(sys.argv[1])
 
 with open("scrapped-html/" + namefile + ".html", "r") as f:
 	scrappedDoc = BeautifulSoup(f, "html.parser")

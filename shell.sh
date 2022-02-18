@@ -7,6 +7,8 @@ do
     NAME=$(echo $HTML | cut -d '/' -f2| cut -d '.' -f1)
     echo "Extracting" $NAME
     python3 shell.py $NAME
+
+    sass $NAME.css $NAME.css
 done
 echo "Done"
 

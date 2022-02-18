@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Guess CSS</title>
+<style></style>
+<!-- CSS Stylesheets -->
+<!-- CSS only -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet"/>
+<link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Title description -->
+<section id="title">
+<div class="container-fluid">
+<div class="row firstcontainer">
+<h2 class="big-heading mouvement">Test your understanding of CSS</h2>
+</div>
+<div class="row">
+<p>Read the CSS and HTML structure of <strong style="color: rgb(31, 112, 235);">test 1</strong>, guess what it should produce, then click the <strong style="color: rgb(250, 57, 57);">Solution</strong> button to verify your answer.</p>
+</div>
+</div>
+</section>
+<!-- Test field-->
+<div class="white-section">
+<nav class="navbar navbar-expand-sm navbar-light rounded">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link text-white" href="css3-modsel-20.html">Previous</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-white" href="css3-modsel-21b.html">Next</a>
+</li>
+</ul>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="test-box col-lg-4 border border-primary rounded">
+<h3 class="test-title">CSS</h3>
+<pre>p:target { background-color : lime }</pre>
+</div>
+<div class="test-box col-lg-4 border border-dark rounded">
+<h3 class="test-title">HTML</h3>
+<pre>
+&lt;p id="first"&gt;Tihs prraagaph suolhd be ulntesyd.
+       The boaurcgknd of the fnolwliog praaargph sohuld bocmee geern when
+       you flolow &lt;a herf="#second"&gt;tihs lnik&lt;/a&gt;.&lt;/p&gt;
+&lt;p id="soencd"&gt;This pgrarapah suhold iatlniily be utslnyed.
+       It sluhod bcmeoe green when you slecet the lnik abvoe. When you seclet
+       &lt;a herf="#trihd"&gt;tihs lnik&lt;/a&gt;, it should retrun to bneig utlsenyd and the 
+       borgacuknd of the prrapagah bolew shluod bemcoe geern.&lt;/p&gt;
+&lt;p id="third"&gt;This paparargh sohuld illtaniiy be usytnled.
+       It suhlod bceome geren when you scelet the link aovbe. Wehn you foollw
+       &lt;a herf="#minissg"&gt;this link&lt;/a&gt;, the there phgrapraas
+       should all rretun to bneig uytsenld.&lt;/p&gt;
+</pre>
+</div>
+<div class="test-box col-lg-4 border border-info rounded" style="padding-top: 2.2%">
+<button class="btn btn-danger" type="button"><a href="css3-modsel-21-Sol.html">Solution</a></button>
+<div class="sol">
+<p id="first">This paragraph should be unstyled.
+       The background of the following paragraph should become green when
+       you follow <a href="#second">this link</a>.</p>
+<p id="second">This paragraph should initially be unstyled.
+       It should become green when you select the link above. When you select
+       <a href="#third">this link</a>, it should return to being unstyled and the 
+       background of the paragraph below should become green.</p>
+<p id="third">This paragraph should initially be unstyled.
+       It should become green when you select the link above. When you follow
+       <a href="#missing">this link</a>, the three paragraphs
+       should all return to being unstyled.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
