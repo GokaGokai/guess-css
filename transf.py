@@ -1,7 +1,46 @@
 from logging.config import stopListening
 from bs4 import BeautifulSoup
+import random
+from os.path import isfile, join
+from os import listdir
+import math
 
-# Only the first test for now
+
+# Shuffles files
+def shuffleFiles(filesArray):
+	lenFilesArray = len(filesArray)
+	filesCopy = filesArray.copy()
+	shuffledFiles = []
+
+	for file in range(lenFilesArray):
+		chosenIndex = hasard(filesCopy)
+		shuffledFiles.append(filesCopy[chosenIndex])
+		filesCopy.pop(chosenIndex)
+		
+	return shuffledFiles
+
+def hasard(filesArray):
+	randomNumber = math.floor(random()*(len(filesArray)))
+	print(randomNumber)
+	return randomNumber
+
+path = "guess-css/scrapped-html/"
+files = [file for file in listdir(path) if isfile(join(path, file))]
+shuffledArray = shuffleFiles(files)
+
+print(shuffledArray)
+
+
+#print (len(files))
+#shuffledFiles= random.sample(files)
+#files.sort
+#print(files)
+#print(files)
+#print('\n')
+#print(shuffledFiles)
+
+
+
 with open("guess-css/scrapped-html/css3-modsel-1.html", "r") as f:
 	scrappedDoc = BeautifulSoup(f, "html.parser")
 
@@ -12,6 +51,10 @@ with open("guess-css/skeleton-html/index.html", "r") as f2:
 # Need to find the counter, hard coded for now
 strongTitle1 = skeletonDoc.find_all("strong")[0]
 strongTitle1.string = "test 1" 
+
+
+
+#Shuffle HTML text for solution field 
 
 
 # Previous and Next
@@ -48,6 +91,8 @@ styleField.contents=style.contents
 
 # print(styleField)
 # print(solutionScrapped)
+
+
 
 
 with open("guess-css/transf-html/css3-modsel-1.html", "w") as file:
