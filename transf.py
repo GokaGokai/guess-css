@@ -1,5 +1,25 @@
+#! /bin/python
+
 from logging.config import stopListening
 from bs4 import BeautifulSoup
+from random import shuffle
+import re
+
+
+RE_GARBLE = re.compile(r"\b(\w)(\w+)(\w)\b")
+
+
+def garble_word(match):
+    first, middle, last = match.groups()
+
+    middle = list(middle)
+    shuffle(middle)
+
+    return first + ''.join(middle) + last
+
+
+def garble(sentence):
+    return RE_GARBLE.sub(garble_word, sentence)
 
 # Only the first test for now
 with open("guess-css/scrapped-html/css3-modsel-1.html", "r") as f:
@@ -26,9 +46,9 @@ if next != None:
 
 
 # Solution doesn't work
-field = skeletonDoc.find_all("p")
-cssField = field[1]
-htmlField = field[2]
+field = skeletonDoc.find_all("pre")
+cssField = field[0]
+htmlField = field[1]
 # solutionField = skeletonDoc.findAll(class_="test-box")[2]
 solutionField = skeletonDoc.find(class_="sol")
 styleField = skeletonDoc.find("style")
@@ -40,15 +60,15 @@ solutionScrapped = scrappedDoc.find(class_="testText")
 
 # print(solutionField)
 cssField.string = cssScrapped
-htmlField.string = htmlScrapped
+htmlField.string = garble(htmlScrapped)
 solutionField.contents = solutionScrapped.contents
 # styleField[1]['style']=style.contents
 styleField.contents=style.contents
 # solutionField['style']=style.contents
 
-# print(styleField)
-# print(solutionScrapped)
-
+for child in solutionScrapped.find_all():
+	if child.string != None: 
+		child.string = garble(child.string)
 
 with open("guess-css/transf-html/css3-modsel-1.html", "w") as file:
 	file.write(str(skeletonDoc))
