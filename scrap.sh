@@ -14,3 +14,5 @@ do
     curl -o $DIR $SEED$PAGE
     sleep 2
 done
+
+echo "Done"

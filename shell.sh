@@ -1,7 +1,18 @@
 #! bin/bash
 
-python3 shell.py css3-modsel-d4
+#  TO DO: ADD ARGUMENT OF SCRAPPEDHTML FOLDER
 
+for HTML in  scrapped-html/*
+do
+    NAME=$(echo $HTML | cut -d '/' -f2| cut -d '.' -f1)
+    echo "Extracting" $NAME
+    python3 shell.py $NAME
+done
+echo "Done"
+
+# ---
+# BASH VER ONLY, DOESNT FULLY WORK
+# ---
 # for CSS in scrapped-html/* 
 # do 
 #     HTML=$(echo $CSS | cut -d '/' -f2)
