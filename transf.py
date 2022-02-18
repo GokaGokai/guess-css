@@ -1,4 +1,4 @@
-#! /bin/python
+#!/bin/python
 
 from bs4 import BeautifulSoup
 from random import shuffle
@@ -16,17 +16,18 @@ def garble_word(match):
 
     return first + ''.join(middle) + last
 
-
 def garble(sentence):
     return RE_GARBLE.sub(garble_word, sentence)
 
-# TO DO:
-# Add ARGUMENT for HTML names
 # Input
+repInput = str(sys.argv[1])
+repOutput = str(sys.argv[2])
+namefile = str(sys.argv[3])
 
-namefile = str(sys.argv[1])
+# with open("scrapped-html/" + namefile + ".html", "r") as f:
+# 	scrappedDoc = BeautifulSoup(f, "html.parser")
 
-with open("scrapped-html/" + namefile + ".html", "r") as f:
+with open(repInput + "/" + namefile + ".html", "r") as f:
 	scrappedDoc = BeautifulSoup(f, "html.parser")
 
 with open("skeleton-html/index.html", "r") as f2:
@@ -35,21 +36,21 @@ with open("skeleton-html/index.html", "r") as f2:
 with open("skeleton-html/indexSol.html", "r") as f3:
 	skeletonSolDoc = BeautifulSoup(f3, "html.parser")
 
-# TO DO:
-# Need to find the counter, hard coded for now
+# Current test name display
 strongTitle1 = skeletonDoc.find_all("strong")[0]
-strongTitle1.string = "test 1" 
+strongTitle1.string = namefile 
 
-
-# Previous and Next
+# Previous and Next buttons
 previous = scrappedDoc.find("a", text="<==")
 next = scrappedDoc.find("a", text="==>")
 
 if previous != None:
 	skeletonDoc.find_all("a")[0]["href"] = previous["href"]
+	skeletonSolDoc.find_all("a")[0]["href"] = previous["href"]
 
 if next != None:
 	skeletonDoc.find_all("a")[1]["href"] = next["href"]
+	skeletonSolDoc.find_all("a")[1]["href"] = next["href"]
 
 # Extract elements
 style = scrappedDoc.find("style")
@@ -74,7 +75,7 @@ field = skeletonDoc.find_all("pre")
 cssField = field[0]
 htmlField = field[1]
 solutionField = skeletonDoc.find(class_="sol")
-styleField = skeletonDoc.find("style")
+# styleField = skeletonDoc.find("style")
 
 solButton = skeletonDoc.find_all("a")[2]["href"] = namefile + "-Sol.html"
 
@@ -91,8 +92,11 @@ for child in temp.find_all():
 		child.string = garble(child.string)
 
 # Output
-with open("transf-html/" + namefile + ".html" , "w") as file:
+# with open("transf-html/" + namefile + ".html" , "w") as file:
+# 	file.write(str(skeletonDoc))
+
+with open(repOutput + "/" + namefile + ".html" , "w") as file:
 	file.write(str(skeletonDoc))
 
-with open("transf-html/" + namefile + "-Sol.html", "w") as file:
+with open(repOutput + "/" + namefile + "-Sol.html", "w") as file:
 	file.write(str(skeletonSolDoc))

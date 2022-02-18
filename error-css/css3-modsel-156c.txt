@@ -1,0 +1,1 @@
+Error: Parent selectors aren't allowed here. ╷ 2 │ foo & address, p{ background: red ! important; } │ ^ ╵ scrapped-css/css3-modsel-156c.css 2:7 root stylesheet

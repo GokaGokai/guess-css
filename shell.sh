@@ -1,15 +1,34 @@
-#! bin/bash
+#!/bin/bash
 
-#  TO DO: ADD ARGUMENT OF SCRAPPEDHTML FOLDER
+# REPINPUT=$1
+REPINPUT="scrapped-html"
 
-for HTML in  scrapped-html/*
+# shell.py creates scrapped-html folder
+CSSDIR="scrapped-css"
+ERRORDIR="error-css"
+
+mkdir $CSSDIR
+mkdir $ERRORDIR 
+
+for HTML in $REPINPUT/*
 do
     NAME=$(echo $HTML | cut -d '/' -f2| cut -d '.' -f1)
     echo "Extracting" $NAME
     python3 shell.py $NAME
 
-    sass $NAME.css $NAME.css
+    errormessage=$(sass $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
+    if [[ $errormessage == *"Error"* ]]; then
+        echo "Error found"
+        echo $errormessage >> error-css/$NAME.txt
+    else
+        echo "No Error"
+    fi
+
 done
+
+rm error-css/temp.css
+rm error-css/temp.css.map
+
 echo "Done"
 
 # ---

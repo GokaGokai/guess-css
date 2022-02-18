@@ -1,4 +1,4 @@
-#! bin/bash
+#!/bin/bash
 
 mkdir $1
 SEED="https://www.w3.org/Style/CSS/Test/CSS3/Selectors/current/html/full/flat/"
