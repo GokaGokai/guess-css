@@ -1,0 +1,17 @@
+.sol p {
+  background-color: red;
+}
+.sol p[class~=b] {
+  background-color: lime;
+}
+.sol address {
+  background-color: red;
+}
+.sol address[title~=foo] {
+  background-color: lime;
+}
+.sol span[class~=b] {
+  background-color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-7-Sol.css.map */

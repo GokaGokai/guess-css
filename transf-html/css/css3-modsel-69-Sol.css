@@ -1,0 +1,14 @@
+.sol button {
+  background-color: red;
+}
+.sol input {
+  background-color: red;
+}
+.sol button:not(:disabled) {
+  background-color: lime;
+}
+.sol input:not(:disabled) {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-69-Sol.css.map */

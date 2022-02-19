@@ -1,0 +1,11 @@
+.sol .red {
+  background-color: red;
+}
+.sol p:nth-of-type(3) {
+  background-color: lime;
+}
+.sol dl > :nth-of-type(3n+1) {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-30-Sol.css.map */

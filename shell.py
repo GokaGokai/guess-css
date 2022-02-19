@@ -1,14 +1,17 @@
 #!/bin/python
-
 import sys
 from bs4 import BeautifulSoup
 
-name = str(sys.argv[1])
+# Input
+repInput = str(sys.argv[1])
+repOutput = str(sys.argv[2])
+namefile = str(sys.argv[3])
 
-with open("scrapped-html/" + name + ".html", "r") as f:
+with open(repInput + "/" + namefile + ".html", "r") as f:
 	scrappedDoc = BeautifulSoup(f, "html.parser")
 
+# Output
 output = scrappedDoc.find("style").string
 
-with open("scrapped-css/" + name + ".css", "w") as file:
+with open(repOutput + "/" + namefile + ".css", "w") as file:
 	file.write(str(output))

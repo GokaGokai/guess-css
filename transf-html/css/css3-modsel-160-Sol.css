@@ -1,0 +1,13 @@
+.sol {
+  /* this is not valid CSS, and if UAs
+  implemented the experimental :subject pseudo-class they should have
+  used the :-vnd-ident syntax. */
+}
+.sol p {
+  background: lime;
+}
+.sol p:subject {
+  background: red;
+}
+
+/*# sourceMappingURL=css3-modsel-160-Sol.css.map */

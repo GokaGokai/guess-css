@@ -1,0 +1,4 @@
+.sol {
+  p:first-letter { background-color: red; }
+  p::first-letter { background-color: lime; }
+}

@@ -1,9 +1,13 @@
 #!/bin/bash
+# This shell script calls shell.py
 
-# REPINPUT=$1
-REPINPUT="scrapped-html"
+# Input
+REPINPUT=$1
 
-# shell.py creates scrapped-html folder
+# Input Temp
+# REPINPUT="scrapped-html"
+
+# No arguments required for theses folder names, the default names could be change if wanted by change the variables below
 CSSDIR="scrapped-css"
 ERRORDIR="error-css"
 
@@ -12,24 +16,31 @@ mkdir $ERRORDIR
 
 for HTML in $REPINPUT/*
 do
+    # Extracting CSS into CSSDIR
     NAME=$(echo $HTML | cut -d '/' -f2| cut -d '.' -f1)
     echo "Extracting" $NAME
-    python3 shell.py $NAME
+    python3 shell.py $REPINPUT $CSSDIR $NAME
 
+    # Extracting Errors into ERRORDIR
     errormessage=$(sass $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
     if [[ $errormessage == *"Error"* ]]; then
         echo "Error found"
-        echo $errormessage >> error-css/$NAME.txt
+        echo $errormessage >> $ERRORDIR/$NAME.txt
     else
         echo "No Error"
     fi
 
 done
 
-rm error-css/temp.css
-rm error-css/temp.css.map
+# Removing temp.css created by sass
+rm $ERRORDIR/temp.css
+rm $ERRORDIR/temp.css.map
 
 echo "Done"
+
+
+
+
 
 # ---
 # BASH VER ONLY, DOESNT FULLY WORK

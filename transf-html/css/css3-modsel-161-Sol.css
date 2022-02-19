@@ -1,0 +1,59 @@
+.sol {
+  /* let's try some pseudos that are not valid CSS but are likely to
+  be implemented as extensions in some UAs. These should not be
+  recognised, as UAs implementing such extensions should use the
+  :-vnd-ident syntax. */
+}
+.sol p {
+  background: lime;
+}
+.sol p * {
+  background: lime;
+}
+.sol p > * {
+  background: lime;
+}
+.sol p + * {
+  background: lime;
+}
+.sol p ~ * {
+  background: lime;
+}
+.sol :canvas {
+  background: red;
+}
+.sol :viewport {
+  background: red;
+}
+.sol :window {
+  background: red;
+}
+.sol :menu {
+  background: red;
+}
+.sol :table {
+  background: red;
+}
+.sol :select {
+  background: red;
+}
+.sol ::canvas {
+  background: red;
+}
+.sol ::viewport {
+  background: red;
+}
+.sol ::window {
+  background: red;
+}
+.sol ::menu {
+  background: red;
+}
+.sol ::table {
+  background: red;
+}
+.sol ::select {
+  background: red;
+}
+
+/*# sourceMappingURL=css3-modsel-161-Sol.css.map */

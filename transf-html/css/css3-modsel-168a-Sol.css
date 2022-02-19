@@ -1,0 +1,10 @@
+.sol span::before {
+  background-color: red;
+  content: "FAILED";
+}
+.sol span:before {
+  background-color: lime;
+  content: "PASSED";
+}
+
+/*# sourceMappingURL=css3-modsel-168a-Sol.css.map */

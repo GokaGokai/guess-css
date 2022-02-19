@@ -1,0 +1,11 @@
+.sol .white {
+  background-color: transparent !important;
+}
+.sol .green {
+  background-color: lime;
+}
+.sol div > p.test {
+  background-color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-44b-Sol.css.map */

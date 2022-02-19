@@ -4,9 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <title>Guess CSS</title>
-<style></style>
 <!-- CSS Stylesheets -->
-<!-- CSS only -->
+<!-- Bootstrap CSS only -->
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet"/>
 <link href="css/main.css" rel="stylesheet"/>
 </head>
@@ -18,7 +17,7 @@
 <h2 class="big-heading mouvement">Test your understanding of CSS</h2>
 </div>
 <div class="row">
-<p>Read the CSS and HTML structure of <strong style="color: rgb(31, 112, 235);">css3-modsel-66</strong>, guess what it should produce, then click the <strong style="color: rgb(250, 57, 57);">Solution</strong> button to verify your answer.</p>
+<p>Read the CSS and HTML structure of <strong class="blue">css3-modsel-66</strong>, guess what it should produce, then click the <strong class="red">Solution</strong> button to verify your answer.</p>
 </div>
 </div>
 </section>
@@ -44,32 +43,32 @@ p:not(:target) { background-color: white; color: black; }</pre>
 <div class="test-box col-lg-4 border border-dark rounded">
 <h3 class="test-title">HTML</h3>
 <pre>
-&lt;p id="fsirt"&gt;This pragraaph shluod be ueytlsnd.
-       The bracgukond of the folnowilg pagraraph sluhod bomece blue when
-       you floolw &lt;a href="#scnoed"&gt;this lnik&lt;/a&gt;.&lt;/p&gt;
-&lt;p id="sncoed"&gt;Tihs prrapaagh souhld iailtlniy be usytlned.
-       It suolhd bomece bule when you sleect the link avobe. Wehn you slceet
-       &lt;a herf="#tirhd"&gt;tihs link&lt;/a&gt;, it soluhd rruetn to bineg uyletnsd and the 
-       bnkroacugd of the prgrpaaah below slhoud boecme bule.&lt;/p&gt;
-&lt;p id="third"&gt;Tihs paararpgh sohuld iilnailty be uysltend.
-       It shulod bmcoee blue when you sceelt the link avboe. When you fololw
-       &lt;a href="#missing"&gt;tihs link&lt;/a&gt;, the trhee prrapahags
-       should all rutren to bieng utesylnd.&lt;/p&gt;
+&lt;p id="fsrit"&gt;Tihs paagprrah should be uystlend.
+       The bkaognucrd of the fwololnig pgaraaprh suhlod bemoce blue wehn
+       you flloow &lt;a href="#socned"&gt;tihs link&lt;/a&gt;.&lt;/p&gt;
+&lt;p id="sceond"&gt;Tihs praagprah slohud iilnaltiy be uytlensd.
+       It sulohd bemoce bule wehn you select the link above. Wehn you sleect
+       &lt;a herf="#trihd"&gt;tihs lnik&lt;/a&gt;, it soulhd rtreun to bieng uyseltnd and the 
+       brgackunod of the prapagrah beolw shuold bocmee blue.&lt;/p&gt;
+&lt;p id="tirhd"&gt;This pprraaagh suolhd iiainltly be unstlyed.
+       It suohld boceme bule wehn you slecet the lnik abvoe. Wehn you flloow
+       &lt;a herf="#mniissg"&gt;tihs link&lt;/a&gt;, the terhe pahagrrpas
+       soluhd all reurtn to bineg uysentld.&lt;/p&gt;
 </pre>
 </div>
-<div class="test-box col-lg-4 border border-info rounded" style="padding-top: 2.2%">
-<button class="btn btn-danger" type="button"><a href="css3-modsel-66-Sol.html">Solution</a></button>
+<div class="test-box col-lg-4 border border-info rounded pad">
+<a class="btn btn-danger" href="css3-modsel-66-Sol.html" role="button">Solution</a>
 <div class="sol">
 <p id="first">This paragraph should be unstyled.
        The background of the following paragraph should become blue when
        you follow <a href="#second">tihs lnik</a>.</p>
 <p id="second">This paragraph should initially be unstyled.
        It should become blue when you select the link above. When you select
-       <a href="#third">tihs link</a>, it should return to being unstyled and the 
+       <a href="#third">tihs lnik</a>, it should return to being unstyled and the 
        background of the paragraph below should become blue.</p>
 <p id="third">This paragraph should initially be unstyled.
        It should become blue when you select the link above. When you follow
-       <a href="#missing">this link</a>, the three paragraphs
+       <a href="#missing">tihs lnik</a>, the three paragraphs
        should all return to being unstyled.</p>
 </div>
 </div>

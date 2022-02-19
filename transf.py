@@ -1,9 +1,26 @@
 #!/bin/python
-
 from bs4 import BeautifulSoup
 from random import shuffle
 import re
 import sys
+
+# Input
+repInput = str(sys.argv[1])
+repOutput = str(sys.argv[2])
+namefile = str(sys.argv[3])
+
+with open(repInput + "/" + namefile + ".html", "r") as f:
+	scrappedDoc = BeautifulSoup(f, "html.parser")
+
+with open(repInput + "/" + namefile + ".html", "r") as ft:
+	scrappedDocTemp = BeautifulSoup(ft, "html.parser")
+
+with open("skeleton-html/index.html", "r") as f2:
+	skeletonDoc = BeautifulSoup(f2, "html.parser")
+
+with open("skeleton-html/indexSol.html", "r") as f3:
+	skeletonSolDoc = BeautifulSoup(f3, "html.parser")
+	
 
 # Shuffle function
 RE_GARBLE = re.compile(r"\b(\w)(\w+)(\w)\b")
@@ -19,22 +36,6 @@ def garble_word(match):
 def garble(sentence):
     return RE_GARBLE.sub(garble_word, sentence)
 
-# Input
-repInput = str(sys.argv[1])
-repOutput = str(sys.argv[2])
-namefile = str(sys.argv[3])
-
-# with open("scrapped-html/" + namefile + ".html", "r") as f:
-# 	scrappedDoc = BeautifulSoup(f, "html.parser")
-
-with open(repInput + "/" + namefile + ".html", "r") as f:
-	scrappedDoc = BeautifulSoup(f, "html.parser")
-
-with open("skeleton-html/index.html", "r") as f2:
-	skeletonDoc = BeautifulSoup(f2, "html.parser")
-
-with open("skeleton-html/indexSol.html", "r") as f3:
-	skeletonSolDoc = BeautifulSoup(f3, "html.parser")
 
 # Current test name display
 strongTitle1 = skeletonDoc.find_all("strong")[0]
@@ -52,51 +53,60 @@ if next != None:
 	skeletonDoc.find_all("a")[1]["href"] = next["href"]
 	skeletonSolDoc.find_all("a")[1]["href"] = next["href"]
 
-# Extract elements
+
+# Extract elements from scrapped html
 style = scrappedDoc.find("style")
 cssScrapped = scrappedDoc.find_all("pre")[0].string
 htmlScrapped = scrappedDoc.find_all("pre")[1].string
 solutionScrapped = scrappedDoc.find(class_="testText")
+solutionScrappedTemp = scrappedDocTemp.find(class_="testText")
+
 
 # Modify skeleton-html-sol
 fieldSol = skeletonSolDoc.find_all("pre")
 cssFieldSol = fieldSol[0]
 htmlFieldSol = fieldSol[1]
 solutionFieldSol = skeletonSolDoc.find(class_="sol")
-styleFieldSol = skeletonSolDoc.find("style")
 
 cssFieldSol.string = cssScrapped
 htmlFieldSol.string = htmlScrapped
-solutionFieldSol.contents = solutionScrapped.contents
-styleFieldSol.contents=style.contents
+solutionFieldSol.contents = solutionScrappedTemp.contents
+
+# Linking CSS sheets
+skeletonSolDoc.find_all("link")[2]["href"] = "css/" + namefile + "-Sol.css"
+
+# Hide Solution Button
+skeletonSolDoc.find_all("a")[2]["href"] = namefile + ".html"
+
 
 # Modify skeleton-html
 field = skeletonDoc.find_all("pre")
 cssField = field[0]
 htmlField = field[1]
 solutionField = skeletonDoc.find(class_="sol")
-# styleField = skeletonDoc.find("style")
 
 solButton = skeletonDoc.find_all("a")[2]["href"] = namefile + "-Sol.html"
 
 cssField.string = cssScrapped
-htmlField.string = garble(htmlScrapped)
-solutionField.contents = solutionScrapped.contents
-# styleField.contents=style.contents
 
-# TO DO:
-# Undo shuffle for sol
-temp = solutionScrapped
-for child in temp.find_all():
+# Apply Shuffle in HTML and Solution Field
+htmlField.string = garble(htmlScrapped)
+
+solutionField.contents = solutionScrapped.contents
+for child in solutionScrapped.find_all():
 	if child.string != None: 
 		child.string = garble(child.string)
 
-# Output
-# with open("transf-html/" + namefile + ".html" , "w") as file:
-# 	file.write(str(skeletonDoc))
 
+# Output HTMLs
 with open(repOutput + "/" + namefile + ".html" , "w") as file:
 	file.write(str(skeletonDoc))
 
 with open(repOutput + "/" + namefile + "-Sol.html", "w") as file:
 	file.write(str(skeletonSolDoc))
+
+# Output SASS
+sass = ".sol {"+style.string+"}"
+
+with open(repOutput + "/sass/" + namefile + "-Sol.scss", "w") as file:
+	file.write(str(sass))

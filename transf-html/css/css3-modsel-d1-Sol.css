@@ -1,0 +1,10 @@
+.sol #test {
+  background: red;
+  display: block;
+  padding: 1em;
+}
+.sol #test:not(:empty) {
+  background: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-d1-Sol.css.map */

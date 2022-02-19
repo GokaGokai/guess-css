@@ -1,0 +1,9 @@
+.sol :link, .sol :visited {
+  color: navy;
+  text-decoration: none;
+}
+.sol :link:hover span {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-18c-Sol.css.map */

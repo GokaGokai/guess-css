@@ -1,0 +1,8 @@
+.sol input, .sol span {
+  background-color: red;
+}
+.sol input:not(:checked), .sol input:not(:checked) + span {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-70-Sol.css.map */

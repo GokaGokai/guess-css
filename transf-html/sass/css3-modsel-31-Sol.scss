@@ -1,0 +1,4 @@
+.sol {.red { background-color : red }
+p:nth-last-of-type(3) { background-color : lime }
+dl > :nth-last-of-type(3n+1) { background-color : lime }
+}

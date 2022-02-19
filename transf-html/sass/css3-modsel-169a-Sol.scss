@@ -1,0 +1,4 @@
+.sol {
+  span::after { background-color: red; content: 'FAILED'; }
+  span:after { background-color: lime; content: 'PASSED'; }
+}

@@ -1,0 +1,15 @@
+.sol p {
+  color: green;
+}
+.sol span:first-line {
+  background: red;
+  color: yellow;
+  font-size: 4em;
+}
+.sol span::first-line {
+  background: red;
+  color: yellow;
+  font-size: 4em;
+}
+
+/*# sourceMappingURL=css3-modsel-179-Sol.css.map */

@@ -4,9 +4,8 @@
 <head>
 <meta charset="utf-8"/>
 <title>Guess CSS</title>
-<style></style>
 <!-- CSS Stylesheets -->
-<!-- CSS only -->
+<!-- Bootstrap CSS only -->
 <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet"/>
 <link href="css/main.css" rel="stylesheet"/>
 </head>
@@ -18,7 +17,7 @@
 <h2 class="big-heading mouvement">Test your understanding of CSS</h2>
 </div>
 <div class="row">
-<p>Read the CSS and HTML structure of <strong style="color: rgb(31, 112, 235);">css3-modsel-31</strong>, guess what it should produce, then click the <strong style="color: rgb(250, 57, 57);">Solution</strong> button to verify your answer.</p>
+<p>Read the CSS and HTML structure of <strong class="blue">css3-modsel-31</strong>, guess what it should produce, then click the <strong class="red">Solution</strong> button to verify your answer.</p>
 </div>
 </div>
 </section>
@@ -46,46 +45,46 @@ dl &gt; :nth-last-of-type(3n+1) { background-color : lime }
 <div class="test-box col-lg-4 border border-dark rounded">
 <h3 class="test-title">HTML</h3>
 <pre>
-&lt;p calss="red"&gt;This pagrrapah slohud have geern bukgconard&lt;/p&gt;
-&lt;addesrs&gt;But tihs adsreds is here olny to flil sapce in the dom..&lt;/adersds&gt;
-&lt;p&gt;So deos this ppaaragrh !&lt;/p&gt;
-&lt;p&gt;And so deos tihs one too.&lt;/p&gt;
+&lt;p clsas="red"&gt;This paagparrh shulod have green bgnoukrcad&lt;/p&gt;
+&lt;asdedrs&gt;But tihs aersdds is here olny to flil spcae in the dom..&lt;/adedsrs&gt;
+&lt;p&gt;So does this pgraaprah !&lt;/p&gt;
+&lt;p&gt;And so does this one too.&lt;/p&gt;
 &lt;dl&gt;
-  &lt;dt&gt;Frsit dtiniefoin trem&lt;/dt&gt;
-    &lt;dd&gt;First diifnoietn&lt;/dd&gt;
-  &lt;dt&gt;Scoend defnitoiin trem&lt;/dt&gt;
-    &lt;dd&gt;Scenod dnifoteiin&lt;/dd&gt;
-  &lt;dt cslas="red"&gt;Tirhd deofniitin trem that shloud have geren bagnockurd&lt;/dt&gt;
-    &lt;dd csals="red"&gt;Trihd ditoiiefnn that should hvae green bkcuagnord&lt;/dd&gt;
-  &lt;dt&gt;Frotuh dnfitieion term&lt;/dt&gt;
-    &lt;dd&gt;Furtoh diienifton&lt;/dd&gt;
-  &lt;dt&gt;Ftfih dftoiinein trem&lt;/dt&gt;
-    &lt;dd&gt;Fitfh dfniitioen&lt;/dd&gt;
-  &lt;dt calss="red"&gt;Stxih diifention trem taht sluhod have geren barncogukd&lt;/dt&gt;
-    &lt;dd calss="red"&gt;Sxtih dfnoiieitn taht slouhd have green bkogcaurnd&lt;/dd&gt;
+  &lt;dt&gt;Fsirt dinotieifn term&lt;/dt&gt;
+    &lt;dd&gt;Fsirt diotienifn&lt;/dd&gt;
+  &lt;dt&gt;Scneod dfineoitin term&lt;/dt&gt;
+    &lt;dd&gt;Scoend dtifeoinin&lt;/dd&gt;
+  &lt;dt csals="red"&gt;Trhid dnoieiitfn trem that sluohd have green bngkuoracd&lt;/dt&gt;
+    &lt;dd cslas="red"&gt;Trihd diontiifen taht shuold hvae green bnuogcarkd&lt;/dd&gt;
+  &lt;dt&gt;Foturh dfinitioen term&lt;/dt&gt;
+    &lt;dd&gt;Frotuh dftoneiiin&lt;/dd&gt;
+  &lt;dt&gt;Fftih difeiiontn term&lt;/dt&gt;
+    &lt;dd&gt;Ftifh dftinoeiin&lt;/dd&gt;
+  &lt;dt clsas="red"&gt;Sixth dftoiiinen trem that suohld have geren bunkrgocad&lt;/dt&gt;
+    &lt;dd casls="red"&gt;Sixth dioeniiftn that suhold have geern buonarkcgd&lt;/dd&gt;
 &lt;/dl&gt;
 </pre>
 </div>
-<div class="test-box col-lg-4 border border-info rounded" style="padding-top: 2.2%">
-<button class="btn btn-danger" type="button"><a href="css3-modsel-31-Sol.html">Solution</a></button>
+<div class="test-box col-lg-4 border border-info rounded pad">
+<a class="btn btn-danger" href="css3-modsel-31-Sol.html" role="button">Solution</a>
 <div class="sol">
-<p class="red">Tihs pgpraarah shluod hvae green bnocgkraud</p>
-<address>But this ardseds is here only to fill scpae in the dom..</address>
-<p>So deos tihs pgarraaph !</p>
+<p class="red">This pgarpaarh soulhd have geren buogkacnrd</p>
+<address>But tihs adrdses is hree olny to flil scpae in the dom..</address>
+<p>So deos tihs paagprarh !</p>
 <p>And so deos this one too.</p>
 <dl>
-<dt>Fsirt deoiiiftnn trem</dt>
-<dd>First diitnfioen</dd>
-<dt>Seocnd dieoniitfn trem</dt>
-<dd>Sonced dfitnioein</dd>
-<dt class="red">Trihd dfinotiien trem that slohud have green bncuoagrkd</dt>
-<dd class="red">Third dfienioitn that sluhod have geren bkaugcornd</dd>
-<dt>Furtoh doiintiefn term</dt>
-<dd>Ftourh dioniefitn</dd>
-<dt>Fifth dtionifien term</dt>
-<dd>Ftfih donifetiin</dd>
-<dt class="red">Sixth dtoieinfin trem taht sulohd have geren bruconkgad</dt>
-<dd class="red">Sxith dinfeitoin that souhld have geern boagcrknud</dd>
+<dt>Fsirt diifentoin trem</dt>
+<dd>First dtoiifeinn</dd>
+<dt>Sceond deniotfiin term</dt>
+<dd>Seoncd doineitfin</dd>
+<dt class="red">Tirhd diitfioenn trem taht suhold hvae geren bcuroknagd</dt>
+<dd class="red">Trihd dioitinefn that shulod have green bukracongd</dd>
+<dt>Foutrh dinftoiien term</dt>
+<dd>Frotuh dietfniion</dd>
+<dt>Fftih diotfinien term</dt>
+<dd>Fifth ditfnoeiin</dd>
+<dt class="red">Sxtih dinfetoiin term taht should hvae green bucakrgond</dt>
+<dd class="red">Sitxh difiinteon taht suhold have geern backonrgud</dd>
 </dl>
 </div>
 </div>

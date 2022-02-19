@@ -1,13 +1,19 @@
 #!/bin/bash
+# This shell script calls tranf.py
 
-# REPINPUT=$1
-# REPOUTPUT=$2
+# Input
+REPINPUT=$1
+REPOUTPUT=$2
 
-REPINPUT="scrapped-html"
-REPOUTPUT="transf-html"
+# Input Temp
+# REPINPUT="scrapped-html"
+# REPOUTPUT="trans-html"
 
 mkdir $REPOUTPUT
+mkdir $REPOUTPUT/css
+mkdir $REPOUTPUT/sass
 
+# # Going through the scrappped html folder with transf.py
 for TRANS in $REPINPUT/*
 do
     NAME=$(echo $TRANS | cut -d '/' -f2 | cut -d '.' -f1)
@@ -15,18 +21,15 @@ do
     echo Trans $NAME
 done
 
-mkdir $REPOUTPUT/css
+# Add main.css
 cp skeleton-html/css/main.css $REPOUTPUT/css
 
-echo "Done"
+# Convert SASS into CSS for focused styling
+for SASS in $REPOUTPUT/sass/*
+do 
+    NAMECSS=$(echo $SASS | cut -d '/' -f3 | cut -d '.' -f1)
+    echo "Executing sass $SASS $REPOUTPUT/css/$NAMECSS.css"
+    sass $SASS $REPOUTPUT/css/$NAMECSS.css
+done
 
-# ---
-# Back up
-# ---
-# for TRANS in scrapped-html/*
-# do
-#     NAME=$(echo $TRANS | cut -d '/' -f2 | cut -d '.' -f1)
-#     python3 transf.py $NAME
-#     echo Trans $NAME
-# done
-# echo "Done"
+echo "Done"

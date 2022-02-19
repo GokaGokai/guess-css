@@ -1,0 +1,8 @@
+.sol div.stub > * {
+  color: red;
+}
+.sol div.stub *:not([title*=" on"]) {
+  color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-56-Sol.css.map */

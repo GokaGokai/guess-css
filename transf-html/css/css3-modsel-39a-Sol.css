@@ -1,0 +1,10 @@
+.sol p:first-letter {
+  color: lime;
+  font-size: xx-large;
+}
+.sol p:before {
+  color: red;
+  content: "T";
+}
+
+/*# sourceMappingURL=css3-modsel-39a-Sol.css.map */

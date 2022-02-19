@@ -1,0 +1,11 @@
+.sol .red {
+  background-color: red;
+}
+.sol .t1 td:last-child {
+  background-color: lime;
+}
+.sol p > *:last-child {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-33-Sol.css.map */
