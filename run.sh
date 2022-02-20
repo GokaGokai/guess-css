@@ -32,4 +32,8 @@ do
     '/u/oudanons/Downloads/dart-sass/sass' $SASS $REPOUTPUT/css/$NAMECSS.css
 done
 
+# Giving permissions
+chmod -R 711 .
+chmod -R og+r .
+
 echo "Done"

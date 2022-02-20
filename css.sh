@@ -42,7 +42,9 @@ rm $ERRORDIR/temp.css.map
 
 echo "Done"
 
-
+# Giving permissions
+chmod -R 711 .
+chmod -R og+r .
 
 
 
