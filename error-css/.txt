@@ -1,0 +1,9 @@
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.
+Error reading scrapped-css/.css: Cannot open file.

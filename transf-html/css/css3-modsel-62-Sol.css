@@ -1,0 +1,8 @@
+.sol div.stub > * {
+  background-color: red;
+}
+.sol div.stub *:not(:visited) {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-62-Sol.css.map */

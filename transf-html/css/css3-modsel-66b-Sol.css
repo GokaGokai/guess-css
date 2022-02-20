@@ -1,0 +1,8 @@
+.sol p {
+  background-color: red;
+}
+.sol p:not(:target) {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-66b-Sol.css.map */

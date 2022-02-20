@@ -1,0 +1,26 @@
+.sol {
+  /* Note: This is a valid test even per CSS1, since in CSS1 those rules
+           are invalid and should be dropped. */
+}
+.sol p {
+  background: green;
+  color: white;
+}
+.sol .t1.fail {
+  background: red;
+  color: yellow;
+}
+.sol .fail.t1 {
+  background: red;
+  color: yellow;
+}
+.sol .t2.fail {
+  background: red;
+  color: yellow;
+}
+.sol .fail.t2 {
+  background: red;
+  color: yellow;
+}
+
+/*# sourceMappingURL=css3-modsel-14b-Sol.css.map */

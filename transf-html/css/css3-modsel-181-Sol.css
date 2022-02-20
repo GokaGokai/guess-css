@@ -1,0 +1,46 @@
+.sol .cs {
+  color: green;
+}
+.sol .cs P {
+  background: red;
+  color: yellow;
+}
+.sol .cs .a {
+  background: red;
+  color: yellow;
+}
+.sol .cs .span1 span {
+  background: red;
+  color: yellow;
+}
+.sol .cs .span2 {
+  color: red;
+}
+.sol .cs .span2 SPAN {
+  color: green;
+}
+.sol .cs .span2 span {
+  background: red;
+  color: yellow;
+}
+.sol .ci {
+  color: red;
+}
+.sol .ci P {
+  background: green;
+  color: white;
+}
+.sol .ci .a {
+  background: green;
+  color: white;
+}
+.sol .ci .span1 span {
+  background: green;
+  color: white;
+}
+.sol .ci .span2 SPAN {
+  background: green;
+  color: white;
+}
+
+/*# sourceMappingURL=css3-modsel-181-Sol.css.map */

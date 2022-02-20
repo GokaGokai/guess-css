@@ -1,0 +1,17 @@
+.sol p {
+  background-color: red;
+}
+.sol p[lang|=en] {
+  background-color: lime;
+}
+.sol address {
+  background-color: red;
+}
+.sol address[lang=fi] {
+  background-color: lime;
+}
+.sol span[lang|=fr] {
+  background-color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-8-Sol.css.map */

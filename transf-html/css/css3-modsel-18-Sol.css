@@ -1,0 +1,17 @@
+.sol p:hover {
+  background-color: lime;
+}
+.sol a:hover {
+  background-color: lime;
+}
+.sol tr:hover {
+  background-color: green;
+}
+.sol td:hover {
+  background-color: lime;
+}
+.sol table {
+  border-spacing: 5px;
+}
+
+/*# sourceMappingURL=css3-modsel-18-Sol.css.map */

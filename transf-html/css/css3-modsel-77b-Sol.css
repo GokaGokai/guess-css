@@ -1,0 +1,14 @@
+.sol .green {
+  background-color: lime !important;
+}
+.sol .t1 td:not(:first-child) {
+  background-color: red;
+}
+.sol p > *:not(:first-child) {
+  background-color: red;
+}
+.sol table.t1 td {
+  border: thin black solid;
+}
+
+/*# sourceMappingURL=css3-modsel-77b-Sol.css.map */

@@ -1,0 +1,17 @@
+.sol .red {
+  background-color: red;
+}
+.sol ul > li:nth-child(odd) {
+  background-color: lime;
+}
+.sol ol > li:nth-child(even) {
+  background-color: lime;
+}
+.sol table.t1 tr:nth-child(-n+4) {
+  background-color: lime;
+}
+.sol table.t2 td:nth-child(3n+1) {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-28-Sol.css.map */

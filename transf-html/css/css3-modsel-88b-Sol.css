@@ -1,0 +1,8 @@
+.sol p {
+  color: green !important;
+}
+.sol blockquote + div p {
+  color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-88b-Sol.css.map */

@@ -1,0 +1,8 @@
+.sol a:not(:focus) {
+  background-color: transparent;
+}
+.sol a {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-65-Sol.css.map */

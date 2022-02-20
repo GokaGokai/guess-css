@@ -1,0 +1,22 @@
+.sol p {
+  background: green;
+  color: white;
+}
+.sol .t1:not(.t2) {
+  background: red;
+  color: yellow;
+}
+.sol :not(.t2).t1 {
+  background: red;
+  color: yellow;
+}
+.sol .t2:not(.t1) {
+  background: red;
+  color: yellow;
+}
+.sol :not(.t1).t2 {
+  background: red;
+  color: yellow;
+}
+
+/*# sourceMappingURL=css3-modsel-14d-Sol.css.map */

@@ -1,0 +1,8 @@
+.sol p {
+  color: lime;
+}
+.sol p[class^=""] {
+  color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-184b-Sol.css.map */

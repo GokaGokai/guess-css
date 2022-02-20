@@ -1,0 +1,10 @@
+.sol span::after {
+  background-color: red;
+  content: "FAILED";
+}
+.sol span:after {
+  background-color: lime;
+  content: "PASSED";
+}
+
+/*# sourceMappingURL=css3-modsel-169a-Sol.css.map */

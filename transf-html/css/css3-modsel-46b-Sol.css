@@ -1,0 +1,8 @@
+.sol .green {
+  background-color: lime !important;
+}
+.sol div.stub > p ~ p {
+  background-color: red;
+}
+
+/*# sourceMappingURL=css3-modsel-46b-Sol.css.map */

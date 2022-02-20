@@ -1,0 +1,14 @@
+.sol div {
+  color: green;
+}
+.sol p:not(:first-line) {
+  color: yellow;
+  background: red;
+}
+.sol p:not(:after) {
+  color: yellow;
+  background: red;
+  content: " THIS TEST HAS FAILED! ";
+}
+
+/*# sourceMappingURL=css3-modsel-178-Sol.css.map */

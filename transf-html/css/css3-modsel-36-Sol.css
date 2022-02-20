@@ -1,0 +1,11 @@
+.sol .red {
+  background-color: red;
+}
+.sol p:only-child {
+  background-color: lime;
+}
+.sol div.testText > div > p {
+  margin-left: 1em;
+}
+
+/*# sourceMappingURL=css3-modsel-36-Sol.css.map */

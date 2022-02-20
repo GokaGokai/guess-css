@@ -1,0 +1,8 @@
+.sol p {
+  background-color: red;
+}
+.sol p[title^=foo] {
+  background-color: lime;
+}
+
+/*# sourceMappingURL=css3-modsel-9-Sol.css.map */

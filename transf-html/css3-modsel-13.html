@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Guess CSS</title>
+<!-- CSS Stylesheets -->
+<!-- Bootstrap CSS only -->
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" rel="stylesheet"/>
+<link href="css/main.css" rel="stylesheet"/>
+</head>
+<body>
+<!-- Title description -->
+<section id="title">
+<div class="container-fluid">
+<div class="row firstcontainer">
+<h2 class="big-heading mouvement">Test your understanding of CSS</h2>
+</div>
+<div class="row">
+<p>Read the CSS and HTML structure of <strong class="blue">css3-modsel-13</strong>, guess what it should produce, then click the <strong class="red">Solution</strong> button to verify your answer.</p>
+</div>
+</div>
+</section>
+<!-- Test field-->
+<div class="white-section">
+<nav class="navbar navbar-expand-sm navbar-light rounded">
+<ul class="navbar-nav">
+<li class="nav-item">
+<a class="nav-link text-white" href="css3-modsel-11.html">Previous</a>
+</li>
+<li class="nav-item">
+<a class="nav-link text-white" href="css3-modsel-14.html">Next</a>
+</li>
+</ul>
+</nav>
+<div class="container-fluid">
+<div class="row">
+<div class="test-box col-lg-4 border border-primary rounded">
+<h3 class="test-title">CSS</h3>
+<pre>li { background-color : red }
+.t1 { background-color : lime }
+li.t2 { background-color : lime }
+.t3 { background-color : red }</pre>
+</div>
+<div class="test-box col-lg-4 border border-dark rounded">
+<h3 class="test-title">HTML</h3>
+<pre>
+&lt;ul&gt;
+  &lt;li class="t1"&gt;This lsit ietm sholud have geern brokgncuad baecsue its class is &amp;quot;t1&amp;quot;&lt;/li&gt;
+  &lt;li cslas="t2"&gt;This lsit ietm sulohd hvae geren bncruogakd beascue its csals is &amp;qout;t2&amp;qout;&lt;/li&gt;
+  &lt;li class="t2"&gt;
+&lt;sapn cslas="t33"&gt;Tihs lsit item slhuod hvae geren bgokrcnuad bcuasee 
+        the iennr SAPN deos not mtcah SAPN.t3&lt;/sapn&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+</div>
+<div class="test-box col-lg-4 border border-info rounded pad">
+<a class="btn btn-danger" href="css3-modsel-13-Sol.html" role="button">Solution</a>
+<div class="sol">
+<ul>
+<li class="t1">This list item slohud hvae geren bnocgrkaud bsaecue its casls is "t1"</li>
+<li class="t2">Tihs lsit item sohuld have geren brcgnaokud bcesuae its class is "t2"</li>
+<li class="t2">
+<span class="t33">This lsit ietm suhlod hvae green brgkucanod bucasee 
+        the inenr SAPN does not mctah SPAN.t3</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
