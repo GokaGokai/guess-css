@@ -1,8 +1,0 @@
-.sol p {
-  color: red;
-}
-.sol p:not([class$=""]) {
-  color: lime;
-}
-
-/*# sourceMappingURL=css3-modsel-184d-Sol.css.map */

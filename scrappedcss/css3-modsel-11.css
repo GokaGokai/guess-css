@@ -1,9 +1,0 @@
-p {
-  background-color: red;
-}
-
-p[title*=bar] {
-  background-color: lime;
-}
-
-/*# sourceMappingURL=css3-modsel-11.css.map */
