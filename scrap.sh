@@ -22,4 +22,8 @@ do
     sleep 2
 done
 
+# Giving permissions
+chmod -R 711 .
+chmod -R og+r .
+
 echo "Done"
