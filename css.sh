@@ -8,8 +8,10 @@ REPINPUT=$1
 # REPINPUT="scrapped-html"
 
 # No arguments required for theses folder names, the default names could be change if wanted by change the variables below
-CSSDIR="scrapped-css"
+CSSDIR="scrapped-css" 
 ERRORDIR="error-css"
+
+# '/u/Downloads/oudanons/dart-sass/sass'
 
 mkdir $CSSDIR
 mkdir $ERRORDIR 
@@ -22,7 +24,7 @@ do
     python3 css.py $REPINPUT $CSSDIR $NAME
 
     # Extracting Errors into ERRORDIR
-    errormessage=$(sass $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
+    errormessage=$('/u/Downloads/oudanons/dart-sass/sass' $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
     if [[ $errormessage == *"Error"* ]]; then
         echo "Error found"
         echo $errormessage >> $ERRORDIR/$NAME.txt
