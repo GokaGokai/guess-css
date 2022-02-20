@@ -29,7 +29,7 @@ for SASS in $REPOUTPUT/sass/*
 do 
     NAMECSS=$(echo $SASS | cut -d '/' -f3 | cut -d '.' -f1)
     echo "Executing sass $SASS $REPOUTPUT/css/$NAMECSS.css"
-    sass $SASS $REPOUTPUT/css/$NAMECSS.css
+    '/u/oudanons/Downloads/dart-sass/sass' $SASS $REPOUTPUT/css/$NAMECSS.css
 done
 
 echo "Done"
