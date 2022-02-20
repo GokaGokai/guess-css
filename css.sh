@@ -32,6 +32,8 @@ do
 
 done
 
+python3 error-report.py $ERRORDIR
+
 # Removing temp.css created by sass
 rm $ERRORDIR/temp.css
 rm $ERRORDIR/temp.css.map

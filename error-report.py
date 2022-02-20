@@ -1,8 +1,10 @@
 import glob
 import re
+import sys 
 
+reInput = str(sys.argv[1])
 #Places all error txt files into one txt file
-errorFiles = glob.glob("error-css/*.txt")
+errorFiles = glob.glob(reInput + "/*.txt")
 
 with open("errorReport.txt", "wb") as eR:
     for f in errorFiles:
@@ -35,8 +37,7 @@ with open("errorReport.txt", "rt") as errorFile:
 reportContents = ""
 with open("report.txt", "w") as reportFile:
     for err in range(len(errorName)):
-        print(errorName[err])
-        reportContents = "Error: " + errorName[err] + ".\nfiles: "
+        reportContents = "Error:" + errorName[err] + ".\nfiles: "
         print(errorFiles[err])
         reportContents += ", ".join(errorFiles[err])
         reportContents += "\n"
