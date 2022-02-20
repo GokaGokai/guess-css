@@ -13,8 +13,6 @@ mkdir $REPOUTPUT
 mkdir $REPOUTPUT/css
 mkdir $REPOUTPUT/sass
 
-bash scrap.sh $REPINPUT
-
 # # Going through the scrappped html folder with transf.py
 for TRANS in $REPINPUT/*
 do
@@ -33,7 +31,5 @@ do
     echo "Executing sass $SASS $REPOUTPUT/css/$NAMECSS.css"
     sass $SASS $REPOUTPUT/css/$NAMECSS.css
 done
-
-bash css.sh $REPINPUT
 
 echo "Done"
