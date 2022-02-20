@@ -1,0 +1,8 @@
+Error: Expected identifier. ╷ 3 │ .5cm{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-155.css 3:4 root stylesheet
+Error: Parent selectors aren't allowed here. ╷ 3 │ foo & address, p{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-156.css 3:7 root stylesheet
+Error: Parent selectors aren't allowed here. ╷ 2 │ foo & address, p{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-156b.css 2:7 root stylesheet
+Error: Parent selectors aren't allowed here. ╷ 2 │ foo & address, p{ background: red ! important; } │ ^ ╵ scrapped-css/css3-modsel-156c.css 2:7 root stylesheet
+Error: expected "|". ╷ 3 │ [*=test]{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-157.css 3:5 root stylesheet
+Error: Expected identifier. ╷ 3 │ [*|*=test]{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-158.css 3:6 root stylesheet
+Error: Expected identifier. ╷ 3 │ .13{ color: red; } │ ^ ╵ scrapped-css/css3-modsel-175a.css 3:3 root stylesheet
+Error: Expected identifier. ╷ 3 │ ..test{ background: red; color: yellow; } │ ^ ╵ scrapped-css/css3-modsel-183.css 3:2 root stylesheet
