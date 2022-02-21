@@ -24,7 +24,7 @@ do
     python3 css.py $REPINPUT $CSSDIR $NAME
 
     # Extracting Errors into ERRORDIR
-    errormessage=$('/home/www-ens/oudanons/public_html/guess-css/dart-sass/sass' $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
+    errormessage=$('dart-sass/sass' $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
     if [[ $errormessage == *"Error"* ]]; then
         echo "Error found"
         echo $errormessage >> $ERRORDIR/$NAME.txt
