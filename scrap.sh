@@ -22,11 +22,4 @@ do
     sleep 2
 done
 
-# Giving permissions
-echo "Giving permissions"
-# chmod -R 711 $REPINPUT
-# chmod -R og+r $REPINPUT
-chmod -R 777 $REPINPUT
-
-
 echo "Done"

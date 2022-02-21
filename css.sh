@@ -42,22 +42,6 @@ rm $ERRORDIR/temp.css.map
 
 echo "Done"
 
-# Giving permissions
-echo "Giving permissions"
-# chmod -R 711 $CSSDIR
-# chmod -R og+r $CSSDIR
-
-# chmod -R 711 $CSSDIR
-# chmod -R og+r $CSSDIR
-
-# chmod 711 errorReport.txt
-# chmod og+r errorReport.txt
-
-# chmod 711 report.txt
-# chmod og+r report.txt
-chmod -R 777 $CSSDIR
-chmod -R 777 .
-
 
 
 # ---

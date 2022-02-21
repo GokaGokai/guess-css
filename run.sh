@@ -32,10 +32,4 @@ do
     '/home/www-ens/oudanons/public_html/guess-css/dart-sass/sass' $SASS $REPOUTPUT/css/$NAMECSS.css
 done
 
-# Giving permissions
-echo "Giving permissions"
-# chmod -R 711 $REPOUTPUT
-# chmod -R og+r $REPOUTPUT
-chmod -R 777 $REPOUTPUT
-
 echo "Done"
