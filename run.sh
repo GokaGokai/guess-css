@@ -29,11 +29,13 @@ for SASS in $REPOUTPUT/sass/*
 do 
     NAMECSS=$(echo $SASS | cut -d '/' -f3 | cut -d '.' -f1)
     echo "Executing sass $SASS $REPOUTPUT/css/$NAMECSS.css"
-    '/u/oudanons/Downloads/dart-sass/sass' $SASS $REPOUTPUT/css/$NAMECSS.css
+    '/home/www-ens/oudanons/public_html/guess-css/dart-sass/sass' $SASS $REPOUTPUT/css/$NAMECSS.css
 done
 
 # Giving permissions
-chmod -R 711 .
-chmod -R og+r .
+echo "Giving permissions"
+# chmod -R 711 $REPOUTPUT
+# chmod -R og+r $REPOUTPUT
+chmod -R 777 $REPOUTPUT
 
 echo "Done"

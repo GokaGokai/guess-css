@@ -23,7 +23,10 @@ do
 done
 
 # Giving permissions
-chmod -R 711 .
-chmod -R og+r .
+echo "Giving permissions"
+# chmod -R 711 $REPINPUT
+# chmod -R og+r $REPINPUT
+chmod -R 777 $REPINPUT
+
 
 echo "Done"

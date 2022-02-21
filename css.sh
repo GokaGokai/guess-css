@@ -24,7 +24,7 @@ do
     python3 css.py $REPINPUT $CSSDIR $NAME
 
     # Extracting Errors into ERRORDIR
-    errormessage=$('/u/oudanons/Downloads/dart-sass/sass' $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
+    errormessage=$('/home/www-ens/oudanons/public_html/guess-css/dart-sass/sass' $CSSDIR/$NAME.css $ERRORDIR/temp.css 2>&1)
     if [[ $errormessage == *"Error"* ]]; then
         echo "Error found"
         echo $errormessage >> $ERRORDIR/$NAME.txt
@@ -43,8 +43,20 @@ rm $ERRORDIR/temp.css.map
 echo "Done"
 
 # Giving permissions
-chmod -R 711 .
-chmod -R og+r .
+echo "Giving permissions"
+# chmod -R 711 $CSSDIR
+# chmod -R og+r $CSSDIR
+
+# chmod -R 711 $CSSDIR
+# chmod -R og+r $CSSDIR
+
+# chmod 711 errorReport.txt
+# chmod og+r errorReport.txt
+
+# chmod 711 report.txt
+# chmod og+r report.txt
+chmod -R 777 $CSSDIR
+chmod -R 777 .
 
 
 
