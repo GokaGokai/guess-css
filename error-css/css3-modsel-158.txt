@@ -1,1 +1,0 @@
-Error: Expected identifier. ╷ 3 │ [*|*=test]{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-158.css 3:6 root stylesheet

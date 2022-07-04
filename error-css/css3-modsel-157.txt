@@ -1,1 +1,0 @@
-Error: expected "|". ╷ 3 │ [*=test]{ background: red; } │ ^ ╵ scrapped-css/css3-modsel-157.css 3:5 root stylesheet
